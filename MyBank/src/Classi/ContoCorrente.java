@@ -14,8 +14,8 @@ public class ContoCorrente {
  *preleva va a sottrarre al saldo del conto un importo che deve essere diverso da null, maggiore di 0 e deve avere valore inferiore o uguale al saldo del conto.
  *mostraDati va a stampare a schermo il nome del titolare del conto e il saldo disponibile*/
 	// Attributi
-	private String nomeTitolare;
-	private String numeroConto;
+	private final String nomeTitolare;
+	private final String numeroConto;
 	private Double saldo;
 
 	// Metodi get

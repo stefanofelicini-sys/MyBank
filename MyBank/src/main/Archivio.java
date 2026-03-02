@@ -13,6 +13,7 @@ public class Archivio {
         for (int i = 0; i < conti.length; i++) {
             conti[i].mostraDati();
             System.out.println("Saldo totale: " + conti[i].getSaldo());
+            System.out.println("------");
         }
     }
 }

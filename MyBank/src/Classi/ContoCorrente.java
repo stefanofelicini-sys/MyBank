@@ -1,9 +1,9 @@
 package Classi;
 
 public class ContoCorrente {
-/*La classe ContoCorrente Ë una classe che rappresenta un conto corrente di un individo. 
+/*La classe ContoCorrente √® una classe che rappresenta un conto corrente di un individo.
  *La Classe possiede gli attributi: nomeTitolare, numeroConto e saldo.
- *nomeTitolare contiene il nome e il cognome del proprietario del conto ed Ë una Stringa di massimo 40 caratteri e minimo 3.
+ *nomeTitolare contiene il nome e il cognome del proprietario del conto ed √® una Stringa di massimo 40 caratteri e minimo 3.
  *numeroConto contiene un codice alfa numerico che identifica il conto e accetta solo lettere maiuscole o numeri come caratteri.
  *saldo contiene il valore numerico decimale del saldo disponibile sul conto.
  *
@@ -21,25 +21,29 @@ public class ContoCorrente {
 	// Metodi get
 	public String getnomeTitolare() {
 		if (nomeTitolare == null) {
-			throw new IllegalArgumentException("Il nome del titolare non puÚ essere nullo o vuoto");
+			throw new IllegalArgumentException("Il nome del titolare non pu√≤ essere nullo o vuoto");
 		}
 		if (nomeTitolare.length() < 3 || nomeTitolare.length() > 40) {
-			throw new IllegalArgumentException("Il nome del titolare non puÚ superare i 40 caratteri");
+			throw new IllegalArgumentException("Il nome del titolare non pu√≤ superare i 40 caratteri");
 		}
 		return nomeTitolare;
 	}
 
 	public String getnumeroConto() {
 		if (numeroConto == null) {
-			throw new IllegalArgumentException("Il numero di conto non puÚ essere nullo o vuoto");
+			throw new IllegalArgumentException("Il numero di conto non pu√≤ essere nullo o vuoto");
 		}
 		if (numeroConto.length() < 8 || numeroConto.length() > 20) {
 			throw new IllegalArgumentException("Il numero di conto deve avere tra 8 e 20 caratteri");
 		}
 		if (!numeroConto.matches("[A-Z0-9]+")) {
-			throw new IllegalArgumentException("Il numero di conto puÚ contenere solo lettere maiuscole e cifre");
+			throw new IllegalArgumentException("Il numero di conto pu√≤ contenere solo lettere maiuscole e cifre");
 		}
 		return numeroConto;
+	}
+
+	public Double getSaldo(){
+		return saldo;
 	}
 
 	// Costruttore
@@ -59,15 +63,15 @@ public class ContoCorrente {
 	public void versa(Double importo) {
 		if (importo > 0) {
 			saldo += importo;
-			System.out.println("Il versamento Ë andato a buon fine");
+			System.out.println("Il versamento √® andato a buon fine");
 		} else {
-			System.out.println("Il versamento non Ë andato a buon fine");
+			System.out.println("Il versamento non √® andato a buon fine");
 		}
 	}
 
 	/*
 	 * Il metodo preleva va a togliere dal saldo del conto una somma pari
-	 * all'importo inserito che dovr‡ essere maggiore di 0 e minore del totale del
+	 * all'importo inserito che dovr√† essere maggiore di 0 e minore del totale del
 	 * saldo. In caso di successo stampa un messaggio di conferma, in caso contrario
 	 * stampa un messaggio di errore.
 	 */
@@ -77,10 +81,10 @@ public class ContoCorrente {
 				saldo -= importo;
 				System.out.println("prelievo avvenuto con successo");
 			} else {
-				System.out.println("Il prelievo non Ë andato a buon fine");
+				System.out.println("Il prelievo non √® andato a buon fine");
 			}
 		} else {
-			System.out.println("Il prelievo non Ë andato a buon fine");
+			System.out.println("Il prelievo non √® andato a buon fine");
 		}
 	}
 

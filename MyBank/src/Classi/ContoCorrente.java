@@ -6,7 +6,6 @@ public class ContoCorrente {
 	private final String numeroConto;
 	private Double saldo;
 
-	// Costruttore con validazione
 	public ContoCorrente(String nomeTitolare, String numeroConto) {
 		// Validazione nomeTitolare
 		if (nomeTitolare == null) {
@@ -71,4 +70,5 @@ public class ContoCorrente {
 	public void mostraDati() {
 		System.out.println("Nome Titolare conto: " + nomeTitolare + "\nsaldo Disponibile: " + saldo);
 	}
+
 }

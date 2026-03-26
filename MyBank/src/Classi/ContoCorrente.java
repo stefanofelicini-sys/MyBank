@@ -6,7 +6,13 @@ public class ContoCorrente {
 	private final String numeroConto;
 	private Double saldo;
 
+	// Costruttore originale (2 parametri)
 	public ContoCorrente(String nomeTitolare, String numeroConto) {
+		this(nomeTitolare, numeroConto, 0.0);
+	}
+
+	// Nuovo costruttore (3 parametri) per permettere a ContoRisparmio di funzionare
+	public ContoCorrente(String nomeTitolare, String numeroConto, Double saldoIniziale) {
 		// Validazione nomeTitolare
 		if (nomeTitolare == null) {
 			throw new IllegalArgumentException("Il nome del titolare non può essere nullo");
@@ -28,7 +34,7 @@ public class ContoCorrente {
 
 		this.nomeTitolare = nomeTitolare;
 		this.numeroConto = numeroConto;
-		this.saldo = 0.0;
+		this.saldo = saldoIniziale;
 	}
 
 	// Metodi getter (senza controlli, perché già validati)
